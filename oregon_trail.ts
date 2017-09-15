@@ -74,7 +74,7 @@
             let huntResult = getRandomIntInclusive(1, 100);
             //  if result bigger than 50, then add 100 food points
             if (huntResult > 50) {
-            this.food = this.food + 100;
+                this.food = this.food + 100;
             } 
             return this.food
         }
@@ -110,7 +110,7 @@
             //  check if passengers length is less than wagon capacity
             if (this.passengerArray.length < this.capacity) {
                 this.passengerArray.push(joinTraveler);  //  now push the traveler onto the passengers array
-                returnMessage = "Successfully added " + joinTraveler.name + " wagon as there was room"
+                returnMessage = "Successfully added " + joinTraveler.name + " to the wagon as there was room"
             } else {
                 returnMessage =  "Could not add " + joinTraveler.name + " to the wagon  as it was already full"
             }
@@ -122,11 +122,11 @@
             let isQuarantine = false;
             //  loop through passenger array
             for (let i=0; i < this.passengerArray.length; i++){
-            if (this.passengerArray[i].isHealthy === false) {
-                //  somebody was sick, so set boolean to true
-                isQuarantine = true;
-                break;
-            }
+                if (this.passengerArray[i].isHealthy === false) {
+                    //  somebody was sick, so set boolean to true
+                    isQuarantine = true;
+                    break;
+                }
             }
             return isQuarantine;
 
@@ -137,8 +137,8 @@
             let foodCount = 0;
             //  loop through the passengers arry
             for (let i=0; i < this.passengerArray.length; i++) {
-            //  increment foodCount by current passenger's food
-            foodCount = foodCount + this.passengerArray[i].food;
+                //  increment foodCount by current passenger's food
+                foodCount = foodCount + this.passengerArray[i].food;
             }
             return foodCount;
         }
@@ -222,11 +222,6 @@
 
         // check total food on wagon and output result
         console.log("The total amount of food on the wagon is: " + wagon1.getFood());
-
-
-
-
-
 
 
 })();

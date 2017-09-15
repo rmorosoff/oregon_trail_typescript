@@ -59,7 +59,7 @@
             //  check if passengers length is less than wagon capacity
             if (this.passengerArray.length < this.capacity) {
                 this.passengerArray.push(joinTraveler); //  now push the traveler onto the passengers array
-                returnMessage = "Successfully added " + joinTraveler.name + " wagon as there was room";
+                returnMessage = "Successfully added " + joinTraveler.name + " to the wagon as there was room";
             }
             else {
                 returnMessage = "Could not add " + joinTraveler.name + " to the wagon  as it was already full";
